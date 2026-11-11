@@ -1,0 +1,824 @@
+
+/* =================================
+   1. GLOBAL STYLE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f1e8;
+    color: #29372d;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =================================
+   2. NAVBAR
+================================= */
+
+header {
+    width: 100%;
+    background-color: #f5f1e8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #dedbd0;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #b77c83;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-menu a {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #687168;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #b77c83;
+}
+
+.nav-btn {
+    background-color: #29372d;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #b77c83;
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    max-width: 1200px;
+    min-height: 650px;
+    margin: auto;
+    padding: 80px 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #b77c83;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 76px;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.hero h1 em {
+    color: #b77c83;
+    font-weight: normal;
+}
+
+.hero-description {
+    max-width: 420px;
+    margin-top: 25px;
+    color: #687168;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.main-btn {
+    background-color: #29372d;
+    color: white;
+    padding: 15px 25px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #b77c83;
+}
+
+.text-btn {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    border-bottom: 1px solid #29372d;
+    padding-bottom: 5px;
+}
+
+
+/* FOTO HERO */
+
+.hero-visual {
+    position: relative;
+    padding: 25px;
+}
+
+.number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #687168;
+}
+
+.flower-photo {
+    height: 480px;
+    overflow: hidden;
+    background-color: #e8ddd5;
+}
+
+.flower-img {
+    transition: transform 0.5s;
+}
+
+.flower-photo:hover img {
+    transform: scale(1.05);
+}
+
+.flower-note {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fffdf8;
+    padding: 18px 25px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 5px 20px #00000010;
+}
+
+.flower-note span {
+    color: #b77c83;
+    font-size: 13px;
+}
+
+.flower-note strong {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+
+/* =================================
+   4. STORY SECTION
+================================= */
+
+.story {
+    background-color: #e9e6da;
+    padding: 110px 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+}
+
+.story-label {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #b77c83;
+}
+
+.story-content {
+    max-width: 750px;
+}
+
+.story h2 {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.story h2 span {
+    color: #b77c83;
+    font-style: italic;
+}
+
+.story p {
+    margin-top: 25px;
+    color: #687168;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.learn-btn {
+    display: inline-block;
+    margin-top: 30px;
+    border-bottom: 1px solid #29372d;
+    padding-bottom: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+
+/* =================================
+   5. COLLECTION SECTION
+================================= */
+
+.collection {
+    max-width: 1200px;
+    margin: auto;
+    padding: 110px 30px;
+}
+
+.collection-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 60px;
+}
+
+.collection-heading > div > p {
+    color: #b77c83;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.collection h2 {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.collection h2 em {
+    color: #b77c83;
+}
+
+.collection-description {
+    max-width: 300px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #687168;
+    line-height: 1.8;
+}
+
+
+/* PRODUK */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    position: relative;
+    background-color: #fffdf8;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px #00000010;
+}
+
+.product-number {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 2;
+    background-color: #fffdf8;
+    padding: 5px 10px;
+    font-size: 11px;
+}
+
+.favorite {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 2;
+    background-color: #b77c83;
+    color: white;
+    padding: 6px 12px;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.product-image {
+    height: 330px;
+    overflow: hidden;
+}
+
+.product-image img {
+    transition: transform 0.5s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.06);
+}
+
+.pink {
+    background-color: #ead4d5;
+}
+
+.cream {
+    background-color: #eee5d5;
+}
+
+.green {
+    background-color: #dce3d5;
+}
+
+.product-info {
+    padding: 22px 10px 10px;
+}
+
+.product-info h3 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.product-info p {
+    margin-top: 8px;
+    color: #687168;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.product-bottom {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-bottom strong {
+    font-size: 15px;
+}
+
+.product-bottom a {
+    background-color: #29372d;
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.product-bottom a:hover {
+    background-color: #b77c83;
+}
+
+
+/* =================================
+   6. SERVICES SECTION
+================================= */
+
+.services {
+    background-color: #e9e6da;
+    padding: 80px 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.service {
+    max-width: 300px;
+    margin: auto;
+}
+
+.service span {
+    color: #b77c83;
+    font-size: 13px;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.service p {
+    margin-top: 10px;
+    color: #687168;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   7. REQUEST SECTION
+================================= */
+
+.request {
+    padding: 110px 30px;
+    text-align: center;
+}
+
+.request-label {
+    color: #b77c83;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.request h2 {
+    margin-top: 15px;
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.request h2 em {
+    color: #b77c83;
+}
+
+.request-intro {
+    max-width: 500px;
+    margin: 20px auto 50px;
+    color: #687168;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.request-message {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fffdf8;
+    padding: 40px;
+    text-align: left;
+}
+
+.request-message h3 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.request-message > p {
+    color: #687168;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.request-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.request-form label {
+    margin: 15px 0 8px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #29372d;
+}
+
+.request-form input,
+.request-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dedbd0;
+    background-color: #f5f1e8;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.request-form input:focus,
+.request-form textarea:focus {
+    border-color: #b77c83;
+}
+
+.request-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.request-form button {
+    margin-top: 25px;
+    padding: 16px;
+    background-color: #29372d;
+    color: white;
+    border: none;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.request-form button:hover {
+    background-color: #b77c83;
+}
+
+
+/* =================================
+   8. CONTACT / CTA
+================================= */
+
+.contact {
+    background-color: #29372d;
+    color: white;
+    text-align: center;
+    padding: 100px 30px;
+}
+
+.contact > p {
+    color: #d5a5a5;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.contact h2 {
+    margin: 20px 0 35px;
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #e8c7c4;
+    color: #29372d;
+    padding: 15px 30px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: white;
+}
+
+
+/* =================================
+   9. FOOTER
+================================= */
+
+footer {
+    background-color: #f5f1e8;
+    padding: 40px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #dedbd0;
+}
+
+.footer-brand {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.footer-brand small {
+    display: block;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+
+.social {
+    display: flex;
+    gap: 25px;
+}
+
+.social a {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #687168;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: #b77c83;
+}
+
+
+/* =================================
+   10. RESPONSIVE TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .flower-photo {
+        height: 380px;
+    }
+
+    .products {
+        gap: 15px;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+
+    .story {
+        gap: 30px;
+    }
+
+}
+
+
+/* =================================
+   11. RESPONSIVE HP
+================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        order: 3;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .nav-btn {
+        font-size: 10px;
+        padding: 10px 13px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-buttons {
+        gap: 15px;
+    }
+
+    .hero-visual {
+        margin-top: 20px;
+    }
+
+    .flower-photo {
+        height: 350px;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+        padding: 70px 25px;
+        gap: 25px;
+    }
+
+    .story h2 {
+        font-size: 36px;
+    }
+
+    .collection {
+        padding: 70px 20px;
+    }
+
+    .collection-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .collection h2 {
+        font-size: 36px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-image {
+        height: 350px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 70px 30px;
+    }
+
+    .service {
+        margin: 0;
+    }
+
+    .request {
+        padding: 70px 20px;
+    }
+
+    .request h2 {
+        font-size: 36px;
+    }
+
+    .request-message {
+        padding: 25px;
+    }
+
+    .contact {
+        padding: 75px 20px;
+    }
+
+    .contact h2 {
+        font-size: 35px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding: 35px 20px;
+    }
+
+    .social {
+        gap: 18px;
+    }
+
+}
